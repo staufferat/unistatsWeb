@@ -110,7 +110,7 @@ export default class Login extends React.Component {
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                     <ModalHeader toggle={this.toggle}><b>Email or password are wrong!</b></ModalHeader>
                     <ModalBody>
-                        If you have any issues please contact the administrator at autexis.ch
+                        If you have any Issues contact the admin.
                     </ModalBody>
                 </Modal>
             </div>

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Login from "./Login";
 import firebaseConfig from "./config/firebase";
 import * as firebase from "firebase";
+import Button from "react-bootstrap/es/Button";
 
 export default class MainPage extends React.Component {
     constructor(props) {
@@ -13,6 +14,7 @@ export default class MainPage extends React.Component {
 
         this.firebaseLoginCheck = this.firebaseLoginCheck.bind(this);
         this.authenthicated = this.authenthicated.bind(this);
+        this.firebaseLogout = this.firebaseLogout.bind(this);
     };
 
     componentDidMount() {
@@ -52,13 +54,22 @@ export default class MainPage extends React.Component {
         });
     }
 
+    firebaseLogout() {
+        firebase.auth().signOut().then(function () {
+            // Sign-out successful.
+        }).catch(function (error) {
+            // An error happened.
+        });
+    }
+
     render() {
         return (
             <div>
                 {this.state.userLoggedIn ?
-                    <div>Hello</div>
+                    <Button onClick={this.firebaseLogout}>Logout</Button>
                     :
                     <Login/>
+
                 }
 
             </div>
