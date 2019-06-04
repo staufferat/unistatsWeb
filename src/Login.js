@@ -29,7 +29,7 @@ export default class Login extends React.Component {
     }
 
     handleKeyPress(target){
-        if(target.charCode==13){
+        if(target.charCode===13){
             this.firebaseLogin();
         }
     }
@@ -46,14 +46,6 @@ export default class Login extends React.Component {
 
         );
     }
-
-    // firebaseLogout(){
-    //     firebase.auth().signOut().then(function() {
-    //         // Sign-out successful.
-    //     }).catch(function(error) {
-    //         // An error happened.
-    //     });
-    // }
 
     handleEmailChange(event){
         this.setState({email: event.target.value});
