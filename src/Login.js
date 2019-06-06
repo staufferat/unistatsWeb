@@ -59,8 +59,8 @@ export default class Login extends React.Component {
         return (
             <div>
                 <Form style={{marginBottom: "10px"}}>
-                    <Row>
-                        <Col xs={12} sm={12} md={{size: 8, offset: 2}} lg={{size: 4, offset: 4}} xl={{size: 3, offset: 4}}>
+                    {/*<Row>*/}
+                        {/*<Col xs={12} sm={12} md={{size: 8, offset: 2}} lg={{size: 4, offset: 4}} xl={{size: 3, offset: 4}}>*/}
                             <FormGroup>
                                 <Label for="exampleEmail">Email</Label>
                                 <Input
@@ -72,10 +72,10 @@ export default class Login extends React.Component {
                                     onKeyPress={this.handleKeyPress}
                                 />
                             </FormGroup>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col xs={12} sm={12} md={{size: 8, offset: 2}} lg={{size: 4, offset: 4}} xl={{size: 3, offset: 4}}>
+                        {/*</Col>*/}
+                    {/*</Row>*/}
+                    {/*<Row>*/}
+                        {/*<Col xs={12} sm={12} md={{size: 8, offset: 2}} lg={{size: 4, offset: 4}} xl={{size: 3, offset: 4}}>*/}
                             <FormGroup>
                                 <Label for="examplePassword">Password</Label>
                                 <Input
@@ -87,17 +87,17 @@ export default class Login extends React.Component {
                                     onKeyPress={this.handleKeyPress}
                                 />
                             </FormGroup>
-                        </Col>
-                    </Row>
+                        {/*</Col>*/}
+                    {/*</Row>*/}
                 </Form>
-                <Row>
-                    <Col xs={12} sm={12} md={{size: 8, offset: 2}} lg={{size: 1, offset: 4}} xl={{size: 3, offset: 4}}>
+                {/*<Row>*/}
+                    {/*<Col xs={12} sm={12} md={{size: 8, offset: 2}} lg={{size: 1, offset: 4}} xl={{size: 3, offset: 4}}>*/}
                         <Button onClick={ () => {
                             this.firebaseLogin();
 
                         }}>Login</Button>
-                    </Col>
-                </Row>
+                    {/*</Col>*/}
+                {/*</Row>*/}
 
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                     <ModalHeader toggle={this.toggle}><b>Email or password are wrong!</b></ModalHeader>

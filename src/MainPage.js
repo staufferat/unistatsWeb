@@ -3,13 +3,14 @@ import Login from "./Login";
 import firebaseConfig from "./config/firebase";
 import * as firebase from "firebase";
 import Button from "react-bootstrap/es/Button";
+import {Form, FormGroup, Label, Input, Col } from 'reactstrap';
 
 export default class MainPage extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-          userLoggedIn: false,
+            userLoggedIn: false,
         };
 
         this.firebaseLoginCheck = this.firebaseLoginCheck.bind(this);
@@ -68,7 +69,11 @@ export default class MainPage extends React.Component {
                 {this.state.userLoggedIn ?
                     <Button onClick={this.firebaseLogout}>Logout</Button>
                     :
-                    <Login/>
+                    <Col xs={{size: 10, offset: 1}} sm={{size: 10, offset: 1}} >
+                        <Login/>
+
+                    </Col>
+
 
                 }
 
